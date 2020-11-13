@@ -10,6 +10,12 @@ libraries of flask are called flask extensions
 
 ---
 
+## To install flask
+
+```cmd
+pip install flask
+```
+
 ## To initialize a flask project
 
 Create a file main.py
@@ -17,6 +23,14 @@ Create a file main.py
 Put the decorators in the methods
 
 Declare a new variable in the venv called FLASK_APP with the value of the main file of the instance of flask
+
+### In windows
+
+```cmd
+set FLASK_APP=main.py
+```
+
+### In linux
 
 ```cmd
 export FLASK_APP=main.py
@@ -35,6 +49,14 @@ Allows that the error messages show in the browser and refresh the data in the b
 To run the server in debug mode
 
 Create a variable called FLASK_DEBUG=1
+
+### In windows
+
+```cmd
+set "FLASK_ENV=development"
+```
+
+### In linux
 
 ```cmd
 export FLASK_DEBUG=1
