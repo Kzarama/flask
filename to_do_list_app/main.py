@@ -4,10 +4,10 @@ import unittest
 
 from app import create_app
 from app.forms import LoginForm
+from app.firestore_service import get_users
+from app.firestore_service import get_todos
 
 app = create_app()
-
-todos = ['TODO 1', 'TODO 2', 'TODO 3']
 
 
 @app.cli.command()
@@ -35,7 +35,13 @@ def hello():
     username = session.get('username')
     context = {
         'user_ip': user_ip,
-        'todos': todos,
+        'todos': get_todos(username),
         'username': username,
     }
+    users = get_users()
+
+    for user in users:
+        print(user.id)
+        print(user.to_dict())
+
     return render_template('hello.html', **context)

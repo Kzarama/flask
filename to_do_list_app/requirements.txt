@@ -3,3 +3,4 @@ flask-bootstrap
 Flask-WTF
 flask-test
 blinker
+firebase-admin
