@@ -1,11 +1,17 @@
-{% if user_ip %}
-    <h1>Hello world flask {{ user_ip }}</h1>
-{% else %}
-    <a href="{{ url_for('index') }}">Go to start</a>
-{% endif %} 
+{% extends 'base.html' %}
 
-<ul>
-    {% for todo in todos %}
-        <li>{{ todo }}</li>
-    {% endfor %}
-</ul>
+{% block title %}{{ super() }}Welcome{% endblock %}
+
+{% block content %}
+    {% if user_ip %}
+        <h1>Hello world flask {{ user_ip }}</h1>
+    {% else %}
+        <a href="{{ url_for('index') }}">Go to start</a>
+    {% endif %} 
+
+    <ul>
+        {% for todo in todos %}
+            <li>{{ todo }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

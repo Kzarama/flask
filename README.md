@@ -66,6 +66,26 @@ For use parameters pass the variable in the render template in the py file and i
 {% for x in range() %} ... {% endfor %}
 ```
 
+### Extends templates
+
+To extend the base html file (child component)
+
+```html
+{% extends 'base.html' %}
+```
+
+Create a block to insert the code in the base, use {{ super() }} to don't overwrite the content of the father (child component)
+
+```html
+{% block title %}{{ super() }}Welcome{% endblock %}
+```
+
+In the father component indicate where the child component have to render
+
+```html
+{% block content %}{% endblock %}
+```
+
 ## Debug
 
 Allows that the error messages show in the browser and refresh the data in the browser
