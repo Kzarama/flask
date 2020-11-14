@@ -52,6 +52,20 @@ For use parameters pass the variable in the render template in the py file and i
 {{ NAME_OF_VARIABLE }}
 ```
 
+### Control structures in html file
+
+#### If
+
+```html
+{% if %} ... {% else %} ... {% endif %}
+```
+
+#### for
+
+```html
+{% for x in range() %} ... {% endfor %}
+```
+
 ## Debug
 
 Allows that the error messages show in the browser and refresh the data in the browser
@@ -63,7 +77,7 @@ Create a variable called FLASK_DEBUG=1
 ### In windows
 
 ```cmd
-set "FLASK_ENV=development"
+set FLASK_ENV=development
 ```
 
 ### In linux
