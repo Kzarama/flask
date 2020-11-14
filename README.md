@@ -153,6 +153,11 @@ session['VARIABLE'] = DATA
 ## Forms
 
 Install flask_wtf (flask what the forms)
+
+```cmd
+pip install Flask-WTF
+```
+
 Import
 
 ```py

@@ -1,5 +1,5 @@
 flask
 flask-bootstrap
-flask-wft
+Flask-WTF
 flask-test
 blinker
