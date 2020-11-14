@@ -108,6 +108,14 @@ And invoke the macro with
 {{ macros.NAME_MACRO(PARAMETERS) }}
 ```
 
+### Include html code
+
+To include html code in another file create a html file with the code and in the place to be included the code add
+
+```html
+{% include 'NAME_FILE.html' %}
+```
+
 ## Debug
 
 Allows that the error messages show in the browser and refresh the data in the browser
