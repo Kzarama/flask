@@ -132,6 +132,24 @@ Import and initialize the extension
 EXTENSION = NAME_EXTENSION_IMPORTED(FLASK_APP)
 ```
 
+## Session in flask
+
+Is a exchange between devices
+
+Import session from flask
+
+To use session add a secret key
+
+```py
+app.config['SECRET_KEY'] = 'SECRET_PASSWORD'
+```
+
+Add the data at the session for encrypt them
+
+```py
+session['VARIABLE'] = DATA
+```
+
 ## Debug
 
 Allows that the error messages show in the browser and refresh the data in the browser
