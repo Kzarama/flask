@@ -77,13 +77,35 @@ To extend the base html file (child component)
 Create a block to insert the code in the base, use {{ super() }} to don't overwrite the content of the father (child component)
 
 ```html
-{% block title %}{{ super() }}Welcome{% endblock %}
+{% block NAME_BLOCK %}{{ super() }}...{% endblock %}
 ```
 
 In the father component indicate where the child component have to render
 
 ```html
-{% block content %}{% endblock %}
+{% block NAME_BLOCK %}{% endblock %}
+```
+
+### Macros
+
+Code that can be invoked with a key work in anywhere
+
+Create the macro.html file
+
+```html
+{% macro NAME_MACRO(PARAMETERS) %} ... {% endmacro %}
+```
+
+In the place to be used import the macros
+
+```html
+{% import 'macros.html' as macros %}
+```
+
+And invoke the macro with
+
+```html
+{{ macros.NAME_MACRO(PARAMETERS) }}
 ```
 
 ## Debug
