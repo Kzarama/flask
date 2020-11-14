@@ -173,6 +173,10 @@ class NAME_FORM(FlaskForm):
 Validations for the fields
 from wtforms.validators
 
+### flash
+
+Messages for the user
+
 ## Debug
 
 Allows that the error messages show in the browser and refresh the data in the browser
