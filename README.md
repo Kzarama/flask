@@ -177,6 +177,10 @@ from wtforms.validators
 
 Messages for the user
 
+## Blueprint
+
+Method for make the application modular
+
 ## Debug
 
 Allows that the error messages show in the browser and refresh the data in the browser
