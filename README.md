@@ -150,6 +150,29 @@ Add the data at the session for encrypt them
 session['VARIABLE'] = DATA
 ```
 
+## Forms
+
+Install flask_wtf (flask what the forms)
+Import
+
+```py
+from flask_wtf import FlaskForm
+```
+
+Don't need to be initialized
+
+Create a class
+
+```py
+class NAME_FORM(FlaskForm):
+    ...
+```
+
+### Validators
+
+Validations for the fields
+from wtforms.validators
+
 ## Debug
 
 Allows that the error messages show in the browser and refresh the data in the browser
