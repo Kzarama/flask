@@ -42,7 +42,17 @@ Turn on the server
 flask run
 ```
 
-### Debug
+## Templates of flask
+
+Create a folder called templates and add the html files here, in the py file import render_template from flask and return the render_template with the name of the template like parameter.
+
+For use parameters pass the variable in the render template in the py file and in the html file add with NAME_OF_VARIABLE replaced for the name of the variable of the py file
+
+```html
+{{ NAME_OF_VARIABLE }}
+```
+
+## Debug
 
 Allows that the error messages show in the browser and refresh the data in the browser
 
