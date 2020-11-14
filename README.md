@@ -202,3 +202,12 @@ Another way to initialize the server in debug mode
 ```python
 app.run(debug=True)
 ```
+
+## Testing
+
+Test of flask
+install flask-test
+
+```cmd
+pip install flask-test
+```
