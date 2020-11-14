@@ -116,6 +116,22 @@ To include html code in another file create a html file with the code and in the
 {% include 'NAME_FILE.html' %}
 ```
 
+## Flask extensions
+
+Extensions of flask
+
+Install the requirements with pip
+
+```cmd
+pip install NAME_EXTENSION
+```
+
+Import and initialize the extension
+
+```cmd
+EXTENSION = NAME_EXTENSION_IMPORTED(FLASK_APP)
+```
+
 ## Debug
 
 Allows that the error messages show in the browser and refresh the data in the browser
