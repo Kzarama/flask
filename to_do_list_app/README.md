@@ -21,3 +21,29 @@ Create variable with the project id
 ```cmd
 export GOOGLE_CLOUD_PROJECT=PROJECT_ID
 ```
+
+Change the project of gcloud
+
+```cmd
+gcolud config set project NAME_PROJECT
+```
+
+See the current project of gcloud
+
+```cmd
+gcloud config list
+```
+
+## Deploy
+
+Deploy of the application in app engine
+
+```cmd
+gcloud app deploy app.yaml
+```
+
+Create a new version of the application
+
+```cmd
+gcloud app deploy app.yaml --version
+```
