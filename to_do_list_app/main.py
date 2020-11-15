@@ -4,7 +4,7 @@ import unittest
 
 from app import create_app
 from app.forms import TodoForm
-from app.firestore_service import get_users, get_todos, put_todo, delete_todo
+from app.firestore_service import get_users, get_todos, put_todo, delete_todo, update_todo
 
 app = create_app()
 
@@ -52,4 +52,12 @@ def delete(todo_id):
     user_id = current_user.id
     delete_todo(user_id, todo_id)
     flash('Task deleted')
+    return redirect(url_for('hello'))
+
+
+@app.route('/todos/update/<todo_id>/<int:done>', methods=['GET', 'POST'])
+def update(todo_id, done):
+    user_id = current_user.id
+    update_todo(user_id, todo_id, done)
+    flash('Task updated')
     return redirect(url_for('hello'))

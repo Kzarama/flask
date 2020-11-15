@@ -1,7 +1,14 @@
 {% macro render_todo(todo, delete_form) %}
     <li class="list-group-item">
-        <span class="badge">{{ todo.to_dict().done }}</span>
+        <span class="badge">
+          {% if todo.to_dict().done %}
+               Done
+          {% else %}
+               To do
+          {% endif %}
+          </span>
         Description: {{ todo.to_dict().Description }}
         <a href="{{ url_for('delete', todo_id=todo.id) }}" class="btn d-inline-block btn-danger">Delete</a>
+        <a href="{{ url_for('update', todo_id=todo.id, done=todo.to_dict().done) }}" class="btn d-inline-block btn-primary">Edit</a>
     </li>
 {% endmacro %}
