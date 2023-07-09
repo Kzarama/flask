@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section>
+  <h2>{{ location['name'] }}</h2>
+  {% if location['type'] != '' %}
+  <p>Type: {{ location['type'] }}</p>
+  {% endif %}
+  {% if location['dimension'] != '' %}
+  <p>Dimension: {{ location['dimension'] }}</p>
+  {% endif %}
+  <p>Characters:</p>
+  <ul>
+    {% for character in characters %}
+    <li>
+      <a href="/character/{{ character['id'] }}">
+        {{ character['name'] }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

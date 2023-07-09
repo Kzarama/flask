@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section>
+  <h2>{{ episode['name'] }}</h2>
+  {% if episode['episode'] != '' %}
+  <p>Episode: {{ episode['episode'] }}</p>
+  {% endif %}
+  {% if episode['air_date'] != '' %}
+  <p>Air date: {{ episode['air_date'] }}</p>
+  {% endif %}
+  <p>Characters:</p>
+  <ul>
+    {% for character in characters %}
+    <li><a href="/character/{{ character['id'] }}">{{ character['name'] }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

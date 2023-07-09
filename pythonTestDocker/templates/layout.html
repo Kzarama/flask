@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es-co">
+
+<head>
+  <title>Rick and Morty</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+
+<body>
+  <article class="article">
+    <h1><a href="/">Rick and Morty</a></h1>
+    {% block content %}{% endblock %}
+  </article>
+</body>
+
+</html>

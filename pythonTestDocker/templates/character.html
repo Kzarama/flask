@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section>
+  <img src="{{ character['image'] }}" alt="{{ character['name'] }}" />
+  <h2>{{ character['name'] }}</h2>
+  {% if character['status'] != '' %}
+  <p>Status: {{ character['status'] }}</p>
+  {% endif %}
+  {% if character['species'] != '' %}
+  <p>Species: {{ character['species'] }}</p>
+  {% endif %}
+  {% if character['type'] != '' %}
+  <p>Type: {{ character['type'] }}</p>
+  {% endif %}
+  {% if character['gender'] != '' %}
+  <p>Gender: {{ character['gender'] }}</p>
+  {% endif %}
+  <p>Origin:
+    {% if character['origin']['url'] != '' %}
+    <a
+      href="/location/{{ character['origin']['name'].replace(' ', '-').lower() }}_{{ character['origin']['url'].split('/')[-1] }}">
+      {{ character['origin']['name'] }}
+    </a>
+    {% else %}
+    {{character['origin']['name'] }}
+    {% endif %}
+  </p>
+  <p>Location:
+    {% if character['origin']['url'] != '' %}
+    <a
+      href="/location/{{ character['location']['name'].replace(' ', '-').lower() }}_{{ character['location']['url'].split('/')[-1] }}">
+      {{ character['location']['name'] }}
+    </a>
+    {% else %}
+    {{character['origin']['name'] }}
+    {% endif %}
+  </p>
+  <p>Episodes:</p>
+  <ul>
+    {% for episode in character['episode'] %}
+    <li><a href="/episode/{{ episode.split('/')[-1] }}">{{ episode }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

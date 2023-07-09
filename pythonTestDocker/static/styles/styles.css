@@ -1,0 +1,35 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.article {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.character__container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.character__card {
+	text-decoration: none;
+	border: 1px solid;
+}
+
+.character__name {
+	margin: 10px auto;
+	max-width: 280px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	color: black;
+}

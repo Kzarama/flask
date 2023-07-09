@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="character__container">
+  {% for character in charactersList %}
+  <a class="character__card" href="/character/{{ character['name'].replace(' ','-').lower() }}_{{ character['id'] }}">
+    <img src="{{ character['image'] }}" alt="{{ character['name'] }} " />
+    <h2 class="character__name">{{ character['name'] }}</h2>
+  </a>
+  {% endfor %}
+</section>
+<p>Page: {{ page }}</p>
+<div>
+  {% if info.prev %}
+  <a href="/characters?page={{ page - 1 }}">Prev</a>
+  {% endif %}
+  {% if info.next %}
+  <a href="/characters?page={{ page + 1 }}">Next</a>
+  {% endif %}
+</div>
+{% endblock %}
