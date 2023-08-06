@@ -1,0 +1,30 @@
+{% extends "layout/layout.html" %}
+
+{% block content %}
+
+<form method="post" action="/update/{{ empleado[0] }}" enctype="multipart/form-data">
+  <label for="nombre">
+    Nombre:
+  </label>
+  <input type="text" name="nombre" id="nombre" value="{{ empleado[1] }}">
+  <br>
+  <label for="correo">
+    Correo:
+  </label>
+  <input type="text" name="correo" id="correo" value="{{ empleado[2] }}">
+  <br>
+  <label for="foto">
+    Foto:
+  </label>
+  <br>
+  <img class="image_empleado" src="{{ url_for('uploads', nombre_foto=empleado[3])}}" alt="{{ empleado[1] }}">
+  <br>
+  <input type="file" accept="image/png, image/gif, image/jpeg" name="foto" id="foto">
+  <br>
+  <input type="submit" value="Editar">
+  <br>
+  <a href="/">Inicio</a>
+
+</form>
+
+{% endblock %}

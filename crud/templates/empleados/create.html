@@ -1,0 +1,26 @@
+{% extends "layout/layout.html" %}
+
+{% block content %}
+
+<form method="post" action="/store" enctype="multipart/form-data">
+  <label for="nombre">
+    Nombre:
+  </label>
+  <input type="text" name="nombre" id="nombre">
+  <br>
+  <label for="correo">
+    Correo:
+  </label>
+  <input type="text" name="correo" id="correo">
+  <br>
+  <label for="foto">
+    Foto:
+  </label>
+  <input type="file" accept="image/png, image/gif, image/jpeg" name="foto" id="foto">
+  <br>
+  <input type="submit" value="Agregar">
+  <br>
+  <a href="/">Inicio</a>
+</form>
+
+{% endblock %}

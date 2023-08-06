@@ -1,0 +1,30 @@
+{% extends "layout/layout.html" %}
+
+{% block content %}
+
+<h1>Hola flask!</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Foto</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for empleado in empleados %}
+    <tr>
+      <td>{{ empleado[0] }}</td>
+      <td>{{ empleado[1] }}</td>
+      <td>{{ empleado[2] }}</td>
+      <td><img class="image_empleado" src="uploads/{{ empleado[3] }}" alt="{{ empleado[1] }}"></td>
+      <td> <a href="/edit/{{ empleado[0] }}">Editar</a> | <a href="/delete/{{ empleado[0] }}">Borrar</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a href="/create">Creacion</a>
+
+{% endblock %}
